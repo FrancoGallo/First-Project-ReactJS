@@ -1,5 +1,5 @@
-import React from 'react'
-import ReactPlayer from 'react-player';
+import React from 'react';
+import { CartWidget } from './CartWidget';
 import './NavBar.css';
 
 function NavBar() {
@@ -10,17 +10,8 @@ function NavBar() {
                 <li><a href="#">Categorías</a></li>
                 <li><a href="#">Contacto</a></li>
                 <li><a href="#">Redes</a></li>
+                <li><a href="#"><CartWidget/></a></li>
             </ul>
-
-            <div className = "background">
-                <ReactPlayer
-                    url = {require ("./video/background.mp4")}
-                    width = "100%"
-                    height = "100%"
-                    playing
-                    loop
-                />
-            </div>
         </nav>
     )
 }
