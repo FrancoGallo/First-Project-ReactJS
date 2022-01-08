@@ -1,0 +1,15 @@
+.item-count {
+    background-color: #ff6347;
+    display: inline-block;
+}
+
+.item-count .item-count-amount {
+    display: flex;
+    justify-content: space-between;
+    padding: 2px;
+}
+
+.item-count .item-count-buttons button {
+    padding: 2px;
+    margin: 2px;
+}
