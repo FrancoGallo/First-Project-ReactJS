@@ -1,7 +1,8 @@
-import ItemCount from './components/ItemListContainer/ItemCount';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import NavBar from './components/NavBar';
 import VideoBackground from './components/VideoBackground';
+import 'bootstrap/dist/css/bootstrap.min.css' // El CSS de boostrap
+import '../src/App.css'
 
 function App() {
   return (
@@ -10,9 +11,9 @@ function App() {
 
         <NavBar/>
 
-        <ItemListContainer greeting="¡Hola Mundo!"/>
-
-        <ItemCount initial={1} stock={5}/>
+        <main>
+          <ItemListContainer/>
+        </main>
       </>
   );
 }

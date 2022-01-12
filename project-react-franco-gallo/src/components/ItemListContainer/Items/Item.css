@@ -1,0 +1,9 @@
+.Item div {
+    background-color: #e4e4e4;
+}
+
+.Item div img {
+    display: block;
+    width: 250px;
+    height: 250px;
+}

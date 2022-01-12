@@ -1,3 +1,9 @@
-h1 {
-    text-align: center;
+.ItemListContainer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+h2 {
+    color: #ffffff;
 }
