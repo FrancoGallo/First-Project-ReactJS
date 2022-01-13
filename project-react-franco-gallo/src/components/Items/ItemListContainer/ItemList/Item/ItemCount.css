@@ -8,6 +8,11 @@
     padding: 2px;
 }
 
+.item-count .item-count-amount p {
+    margin-bottom: 0;
+    font-size: 25px;
+}
+
 .item-count .item-count-buttons {
     display: grid;
     grid-template-columns: 30% 70%;

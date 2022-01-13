@@ -41,7 +41,7 @@ const ItemCount = ({ initial, stock }) => {
             </div>
 
             <div className='item-count-buttons'>
-                <Button onClick={reset} variant="secondary">Resetear</Button>
+                <Button onClick={reset} variant="secondary">Vaciar</Button>
                 <Button variant="success">Agregar al carrito</Button>
             </div>
         </div>

@@ -14,13 +14,34 @@ const products = [
         name: 'Corsair Graphite 780T',
         price: 290,
         stock: 3,
-        img: 'assets/image/Corsair-Graphite-780T.jpg'    
+        img: 'assets/image/products/Corsair-Graphite-780T/Corsair-Graphite-780T-0.webp'    
     },
     {
         id: '2',
         name: 'Cooler Master MB511',
         price: 80,
         stock: 7,
-        img: 'assets/image/Cooler-Master-MB511.jpg'    
-    }
+        img: 'assets/image/products/Cooler-Master-MB511/Cooler-Master-MB511-0.webp'    
+    },
+    {
+        id: '3',
+        name: 'Asus GX601 Rog',
+        price: 319.74,
+        stock: 0,
+        img: 'assets/image/products/Asus-GX601-Rog/Asus-GX601-Rog-0-1.webp'    
+    },
+    {
+        id: '4',
+        name: 'AeroCool Cylon LED',
+        price: 39.54,
+        stock: 14,
+        img: 'assets/image/products/AeroCool-Cylon-LED/AeroCool-Cylon-LED-0.webp'    
+    },
+    {
+        id: '5',
+        name: 'Asus TUF GT501',
+        price: 196.54,
+        stock: 5,
+        img: 'assets/image/products/Asus-TUF-GT501/Asus-TUF-GT501-0.webp'    
+    },
 ]

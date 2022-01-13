@@ -1,5 +1,12 @@
+.Item {
+    margin: 2rem;
+    border-radius: 0.75rem;
+}
+
 .Item div {
     background-color: #e4e4e4;
+    border-top-right-radius: 0.75rem !important;
+    border-bottom-left-radius: 0.75rem !important;
 }
 
 .Item div h4 {

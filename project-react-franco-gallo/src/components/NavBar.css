@@ -1,5 +1,11 @@
 nav {
-    margin-bottom: 45%;
+    margin-bottom: 31rem;
+}
+
+@media only screen and (max-width:990px) {
+    nav {
+        margin-bottom: 26rem;
+    }
 }
 
 nav ul {
