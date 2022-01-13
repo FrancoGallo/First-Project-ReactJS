@@ -1,13 +1,13 @@
+import './Item.css'
 import React from 'react'
 import ItemCount from './ItemCount'
 import { Button } from 'react-bootstrap' // Esta es la forma de importar un componente de boostrap en react.
-import './Item.css'
 
 const Item = ({ item }) => {
     let initial = 0
 
     item.stock >= 1 ? initial=1 : initial=0
-    
+
     return (
         <section className='Item list-group list-group-horizontal'>
             <div className='list-group-item wholeItem'>

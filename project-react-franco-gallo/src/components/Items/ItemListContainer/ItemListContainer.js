@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react'; // Para traer las funciones useEffect y useState.
-import { extractProducts } from '../../products' // Llama a la array de productos.
-import ItemList from './Items/ItemList';
 import './ItemListContainer.css';
+import React, { useState, useEffect } from 'react'; // Para traer las funciones useEffect y useState.
+import { extractProducts } from '../../../products' // Llama a la array de productos.
+import ItemList from './ItemList/ItemList';
 
 const ItemListContainer = () => {
     const [listProducts, setlistProducts] = useState([])
