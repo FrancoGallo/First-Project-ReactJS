@@ -1,27 +1,90 @@
-nav {
-    margin-bottom: 31rem;
+@import url('https://fonts.googleapis.com/css2?family=Iceland&display=swap'); /* font-family: 'Iceland', 'cursive'; */
+
+header {
+    width: 100%;
+    overflow: hidden;
+    height: 100px;
+    position: relative;
 }
 
-@media only screen and (max-width:990px) {
-    nav {
-        margin-bottom: 26rem;
-    }
+header nav {
+    top: -20px;
+    position: absolute;
+    left: 0;
+    right: 0;
+	margin: 20px auto;
+	width: 100%;
+    position: fixed;
+    z-index: 1;
 }
 
-nav ul {
-    display: flex;
-    justify-content: space-evenly;
-    padding: 20px;
+header nav ul {
     list-style: none;
-    font-family: 'Bebas Neue', "cursive";
+    display: table;
+	width: 100%;
+	background-color: #000000;
+	position: relative;
+    padding-left: 0;
+}
+
+header nav ul li {
+    display: table-cell;
+}
+
+header nav ul li:hover ul {
+    display: block;
+    height: 100%;
+}
+
+header nav ul li a {
+    color: #fff;
+	display: block;
+	line-height: 20px;
+	padding: 20px;
+	position: relative;
+	text-align: center;
+	text-decoration: none;
+    font-family: 'Iceland', 'cursive';
     font-size: 20px;
 }
 
-nav ul li a {
-    text-decoration: none;
+header nav ul li a:hover {
     color: #ffffff;
 }
 
-nav ul li a:hover {
-    color: #bebebe;
+header nav ul li a:hover span {
+    top: 0;
+}
+
+header nav ul li a span {
+    background-color: #161616;
+    color: #ffffff;
+	display: block;
+	height: 100%;
+	width: 100%;
+	left: 0;
+	position: absolute;
+	top: -55px;
+    transition: all .3s ease;
+}
+
+header nav ul li a span i {
+    display: block;
+	line-height: 60px;
+}
+
+header nav ul li ul {
+    list-style: none;
+    display: block;
+	position: absolute;
+	background-color: #000000;
+	overflow: hidden;
+    width: auto;
+	height: 0%;
+    padding-left: 0;
+    transition: all .3s ease;
+}
+
+header nav ul li ul li a:hover {
+    background-color: #202020;
 }

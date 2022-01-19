@@ -9,9 +9,8 @@ const ItemDetail = ({ item }) => {
 
     const [changeButtons, setChangeButtons] = useState(true)
 
-    const onAdd = (counter) => {
+    const onAdd = () => {
         setChangeButtons(false)
-        console.log(`${counter}`)
     }
 
     return (
