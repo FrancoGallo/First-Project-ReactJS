@@ -19,7 +19,7 @@ const Item = ({ item }) => {
                 </Link>
                 <div className='item-price-stock'>
                     <h6>Precio: $U {item.price}</h6> 
-                    <h6>Stock: {item.stock}</h6>
+                    <h6>Stock: <span className={(item.stock >= 1) ? 'with-stock' : 'out-of-stock'}>{item.stock}</span></h6>
                 </div>
                 <ItemCount initial={initial} stock={item.stock}/>
             </div>

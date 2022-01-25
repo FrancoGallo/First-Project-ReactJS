@@ -3,11 +3,12 @@ import React, { useState, useEffect } from 'react'; // Para traer las funciones 
 import { extractProducts } from '../../../products' // Llama a la array de productos.
 import ItemList from './ItemList/ItemList';
 import { useParams } from 'react-router-dom';
+import TitleLoadContainer from '../../TitleOfLoad/TitleLoadContainer';
 
 const ItemListContainer = () => {
     const [listProducts, setlistProducts] = useState([])
 
-    const [load, setload] = useState(true) // Lo usas para el if de H2 "Cargando..." que esta mas abajo.
+    const [load, setload] = useState(true) // Lo usas para para la barra de carga que esta mas abajo como "TitleLoadContainer".
 
     const { idMarca } = useParams()
 
@@ -36,7 +37,7 @@ const ItemListContainer = () => {
         <article className='ItemListContainer'>
             {load
             ?
-            <h2>Cargando...</h2>
+            <TitleLoadContainer/>
             :
             <ItemList items={listProducts}/>
             }

@@ -9,8 +9,22 @@ export function useCartContext() {
 export const CartContextProvider = ({children}) => {
     const [cartList, setCartList] = useState([])
 
-    function addItem(Item) {
-        setCartList([...cartList, Item])
+    function addItem(item, cantidad) {
+        isInCart(item.id) ? sumarCantidad(item, cantidad) : setCartList([...cartList, {...item, cantidad}])
+    }
+
+    const isInCart = (id) => {
+        const carrito = cartList.some((prod) => prod.id === id) // ".some" sirve para devolverte un booleano.
+        return carrito
+    }
+
+    const sumarCantidad = (item, cantidad) => {
+        const copiaCarrito = [...cartList]
+        copiaCarrito.forEach((producto) => {
+            producto.id === item.id && (producto.cantidad = producto.cantidad + cantidad)
+            // En vez de hacer "(producto.cantidad = producto.cantidad + cantidad)" podes
+            // hacer "(producto.cantidad += cantidad)" y es lo mismo
+        })
     }
 
     function clearCart() {

@@ -29,3 +29,8 @@
     display: flex;
     justify-content: space-between;
 }
+
+/* Estas clases son para colorear si hay stock o no */
+.with-stock {color: #009600;}
+
+.out-of-stock {color: #ff0000;}
