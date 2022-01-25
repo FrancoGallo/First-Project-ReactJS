@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import ItemCount from '../../ItemListContainer/ItemList/Item/ItemCount'
 import { Link } from 'react-router-dom'
 import { Button } from 'react-bootstrap'
+import { useCartContext } from '../../../Cart/CartContext'
 
 const ItemDetail = ({ item }) => {
     let initial = 1
@@ -11,7 +12,10 @@ const ItemDetail = ({ item }) => {
 
     const onAdd = () => {
         setChangeButtons(false)
+        addItem(item)
     }
+
+    const { cartList, addItem } = useCartContext()
 
     return (
         <section className='Item list-group list-group-horizontal'>

@@ -4,11 +4,13 @@ import ItemListContainer from './components/Items/ItemListContainer/ItemListCont
 import NavBar from './components/NavBar';
 import VideoBackground from './components/VideoBackground';
 import ItemDetailContainer from './components/Items/ItemDetailContainer/ItemDetailContainer';
-import Cart from './components/Cart';
+import Cart from './components/Cart/Cart';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { CartContextProvider } from './components/Cart/CartContext';
 
 function App() {
   return (
+    <CartContextProvider>
       <BrowserRouter>
         <VideoBackground/>
         <NavBar/>
@@ -19,6 +21,7 @@ function App() {
             <Route exact path='/cart' element={<Cart/>}/>
         </Routes>
       </BrowserRouter>
+    </CartContextProvider>
   );
 }
 
