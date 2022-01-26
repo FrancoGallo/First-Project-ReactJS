@@ -8,7 +8,7 @@ const Cart = () => {
     return (
         <section className="cart">
             <button onClick={clearCart}>Vaciar carro</button>
-            {cartList.map(item => 
+            {cartList.map((item) => 
             <div className="cart" key={item.id}>
                 <h4>{item.name}</h4>
                 <h4>{item.price}</h4>

@@ -10,12 +10,12 @@ const ItemDetail = ({ item }) => {
 
     const [changeButtons, setChangeButtons] = useState(true)
 
-    const onAdd = () => {
+    const onAdd = (counter) => {
         setChangeButtons(false)
-        addItem(item)
+        addItem({...item, cantidad: counter})
     }
 
-    const { cartList, addItem } = useCartContext()
+    const { addItem } = useCartContext()
 
     return (
         <section className='Item list-group list-group-horizontal'>
