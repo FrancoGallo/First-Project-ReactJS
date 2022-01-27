@@ -9,29 +9,29 @@ export function useCartContext() {
 export const CartContextProvider = ({children}) => {
     const [cartList, setCartList] = useState([])
 
-    function addItem(item, cantidad) {
+    function addItem (item, counter) {
         // isInCart(item.id) ? sumarCantidad(item, counter) : setCartList([...cartList, {...item, counter}])
         if (isInCart(item.id)) {
-            // sumarCantidad(item, cantidad)
-            console.log(cantidad)
+            sumarCantidad(item, counter)
         }
         else {
-            setCartList([...cartList, {...item, cantidad}])
+            setCartList([...cartList, {...item, counter}])
         }
     }
 
     const isInCart = (id) => {
         const carrito = cartList.some((prod) => prod.id === id) // ".some" sirve para devolverte un booleano.
         return carrito
+        // El "isInCart" esta para devolverte un booleano sobre si el producto ya esta o no en el carrito.
     }
 
-    const sumarCantidad = (item, cantidad) => {
+    const sumarCantidad = (item, counter) => {
         const copiaCarrito = [...cartList]
         
-        copiaCarrito.forEach((producto) => {
-            producto.id === item.id && (producto.cantidad = producto.cantidad + cantidad)
-            // En vez de hacer "(producto.cantidad = producto.cantidad + cantidad)" podes
-            // hacer "(producto.cantidad += cantidad)" y es lo mismo
+        copiaCarrito.forEach((prod) => {
+            prod.id === item.id && (prod.counter = prod.counter + counter)
+            // En vez de hacer "(prod.cantidad = prod.cantidad + cantidad)" podes
+            // hacer "(prod.cantidad += cantidad)" y es lo mismo
         })
     }
 

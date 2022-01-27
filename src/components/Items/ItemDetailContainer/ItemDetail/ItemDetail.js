@@ -12,7 +12,7 @@ const ItemDetail = ({ item }) => {
 
     const onAdd = (counter) => {
         setChangeButtons(false)
-        addItem({...item, cantidad: counter})
+        addItem(item, counter)
     }
 
     const { addItem } = useCartContext()
