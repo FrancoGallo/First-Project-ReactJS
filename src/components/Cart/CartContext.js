@@ -40,7 +40,7 @@ export const CartContextProvider = ({children}) => {
     }
 
     const getTotalAmmount = () => {
-        return cartList.reduce( (acumulador,item) =>  (item.price * item.cantidad + acumulador) ,0);
+        return cartList.reduce( (acumulador,item) =>  (item.price * item.counter + acumulador) ,0);
     }
 
     return(

@@ -4,34 +4,38 @@ import { extractProducts } from '../../../products' // Llama a la array de produ
 import ItemList from './ItemList/ItemList';
 import { useParams } from 'react-router-dom';
 import TitleLoadContainer from '../../TitleOfLoad/TitleLoadContainer';
+import { collection, getDocs, getFirestore, query, where } from 'firebase/firestore'
 
 const ItemListContainer = () => {
     const [listProducts, setlistProducts] = useState([])
 
     const [load, setload] = useState(true) // Lo usas para para la barra de carga que esta mas abajo como "TitleLoadContainer".
 
-    const { idMarca } = useParams()
+    const { idTag } = useParams()
 
     useEffect(() => {
-        if (idMarca) {
-            extractProducts
+        const fb = getFirestore()
+        const queryCollection = query(collection(fb, 'products'), where('tag', '==', 'corsair'))
+
+        if (idTag) {
+            getDocs(queryCollection)
             .then((answer) => {
-                setlistProducts(answer.filter(product => product.marca === idMarca))
+                setlistProducts(answer.docs.map(prod => ({id: prod.id, ...prod.data()})))
             })
             .finally(() => {
                 setload(false)
             })
         } 
         else {
-            extractProducts
+            getDocs(queryCollection)
             .then((answer) => {
-                setlistProducts(answer)
+                setlistProducts(answer.docs.map(prod => ({id: prod.id, ...prod.data()})))
             })
             .finally(() => {
                 setload(false)
             })
         }
-    }, [idMarca])
+    }, [idTag])
 
     return (
         <article className='ItemListContainer'>
