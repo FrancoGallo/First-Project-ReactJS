@@ -13,7 +13,7 @@ const Item = ({ item }) => {
         <section className='Item list-group list-group-horizontal'>
             <div className='list-group-item wholeItem'>
                 <h4>{item.name}</h4>
-                <img src={item.img} alt={item.name}/>
+                <img src={item.img1} alt={item.name}/>
                 <Link to={`/detail/${item.id}`}>
                     <Button variant="outline-dark">Más sobre el producto</Button>
                 </Link>

@@ -21,7 +21,7 @@ const ItemDetail = ({ item }) => {
         <section className='Item list-group list-group-horizontal'>
             <div className='list-group-item wholeItem'>
                 <h4>{item.name}</h4>
-                <img src={item.img} alt={item.name}/>
+                <img src={item.img1} alt={item.name}/>
                 <div className='item-price-stock'>
                     <h6>Precio: $U {item.price}</h6> 
                     <h6>Stock: {item.stock}</h6>

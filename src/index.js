@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { getFirestoreApp } from './FireBase/fbConfig';
+import { getFirestoreApp } from './FireBase/DataBaseConfig';
 
 getFirestoreApp()
 
