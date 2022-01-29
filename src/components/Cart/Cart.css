@@ -1,3 +1,13 @@
 .cart {
     color: white;
 }
+
+.cart img {
+    width: 200px;
+    height: 200px;
+}
+
+i {
+    color: white;
+    font-size: 20px;
+}
