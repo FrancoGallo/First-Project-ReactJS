@@ -24,7 +24,11 @@ const ItemDetail = ({ item }) => {
                 <img src={item.img1} alt={item.name}/>
                 <div className='item-price-stock'>
                     <h6>Precio: $U {item.price}</h6> 
-                    <h6>Stock: {item.stock}</h6>
+                    {
+                        (item.stock >= 1) 
+                            ? <h6 className='with-stock'>Con stock</h6> 
+                            : <h6 className='out-of-stock'>Sin stock</h6>
+                    }
                 </div>
                 {changeButtons 
                 ? <ItemCount initial={initial} stock={item.stock} onAdd={onAdd}/> 

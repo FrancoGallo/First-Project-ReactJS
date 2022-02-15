@@ -3,7 +3,8 @@ import './Cart.css'
 import { addDoc, collection, documentId, getDocs, getFirestore, query, where, writeBatch } from "firebase/firestore"
 import CartItem from "./CartItem"
 import { useState } from "react"
-import { Link } from "react-router-dom"
+import Form from "./Form/Form"
+import Ticket from "./Ticket/Ticket"
 
 
 const Cart = () => {
@@ -53,6 +54,7 @@ const Cart = () => {
         .then(answer => answer.docs.forEach(answer2 => batch.update(answer2.ref, {
             stock: answer2.data().stock - cartList.find(item => item.id === answer2.id).counter
         })))
+        .finally(() => clearCart())
         batch.commit()
     }
 
@@ -68,10 +70,7 @@ const Cart = () => {
             {
                 load 
                     ?
-                        <>
-                            <i>Tu numero de orden es: {orderSummary}</i>
-                            <button><Link to={'/'}>Volver al inicio</Link></button>
-                        </>
+                        <Ticket orderSummary={orderSummary}/>   
                     :
                         <>
                             <section className="cart">
@@ -80,15 +79,7 @@ const Cart = () => {
                                 <h4>Precio total: {(getTotalAmmount()).toFixed(2)}</h4>
                             </section>
 
-                            <section>
-                                <form onSubmit={buyOrder}>
-                                    <input onChange={formChange} value={form.name} type='text' name='name' placeholder='Nombre'/><br/>
-                                    <input onChange={formChange} value={form.lastName} type='text' name='lastName' placeholder='Apellido'/><br/>
-                                    <input onChange={formChange} value={form.email} type='text' name='email' placeholder='Mail'/><br/>
-                                    <input onChange={formChange} value={form.phone} type='text' name='phone' placeholder='Tel.'/><br/>
-                                    <button>Confirmar compra</button>
-                                </form>
-                            </section>
+                            <Form buyOrder={buyOrder} formChange={formChange} form={form} />
                         </>
             }
         </>
