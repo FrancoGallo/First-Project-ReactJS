@@ -1,8 +1,9 @@
 import React from 'react'
+import './Form.css'
 
-const Form = ({buyOrder, formChange, form}) => {
+const Form = ({buyOrder, formChange, form, clearCart}) => {
   return (
-    <section>
+    <section className='form'>
         <form onSubmit={buyOrder}>
             <input 
                 onChange={formChange} 
@@ -32,8 +33,9 @@ const Form = ({buyOrder, formChange, form}) => {
                 name='phone' 
                 placeholder='Tel.'/>
             <br/>
-            <button>Confirmar compra</button>
+            <button className='btn btn-success'>Confirmar compra</button>
         </form>
+        <button className='btn btn-danger' onClick={clearCart}>Vaciar carro</button>
     </section>
   )
 }

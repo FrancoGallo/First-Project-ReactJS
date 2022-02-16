@@ -1,0 +1,10 @@
+.item-detail-container {
+    color: #ffffff;
+    margin: 0 10% 0 2%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.item-detail-container img { /* Momentaneo para tener la imagen controlada */
+    height: 400px;
+}

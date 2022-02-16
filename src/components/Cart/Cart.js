@@ -72,15 +72,14 @@ const Cart = () => {
                     ?
                         <Ticket orderSummary={orderSummary}/>   
                     :
-                        <>
+                        <article className="cart-container">
                             <section className="cart">
-                                <button onClick={clearCart}>Vaciar carro</button>
                                 <CartItem/>
                                 <h4>Precio total: {(getTotalAmmount()).toFixed(2)}</h4>
                             </section>
 
-                            <Form buyOrder={buyOrder} formChange={formChange} form={form} />
-                        </>
+                            <Form buyOrder={buyOrder} formChange={formChange} form={form} clearCart={clearCart}/>
+                        </article>
             }
         </>
     )

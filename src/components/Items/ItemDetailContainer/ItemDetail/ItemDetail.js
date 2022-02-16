@@ -18,24 +18,23 @@ const ItemDetail = ({ item }) => {
     const { addItem } = useCartContext()
 
     return (
-        <section className='Item list-group list-group-horizontal'>
-            <div className='list-group-item wholeItem'>
-                <h4>{item.name}</h4>
+        <section className='item-detail-container'>
+            <div>
                 <img src={item.img1} alt={item.name}/>
-                <div className='item-price-stock'>
-                    <h6>Precio: $U {item.price}</h6> 
-                    {
-                        (item.stock >= 1) 
-                            ? <h6 className='with-stock'>Con stock</h6> 
-                            : <h6 className='out-of-stock'>Sin stock</h6>
-                    }
-                </div>
+            </div>
+            <div>
+                <h3>Precio: $U {item.price}</h3>
+                {
+                    (item.stock >= 1) 
+                        ? <h4 className='with-stock'>Con stock</h4> 
+                        : <h4 className='out-of-stock'>Sin stock</h4>
+                }
                 {changeButtons 
-                ? <ItemCount initial={initial} stock={item.stock} onAdd={onAdd}/> 
-                : <div>
-                    <Link to={'/'}><Button variant="info">Volver al inicio</Button></Link>
-                    <Link to={'/cart'}><Button variant="success">Finalizar compra</Button></Link>  
-                 </div>}
+                    ? <ItemCount initial={initial} stock={item.stock} onAdd={onAdd}/> 
+                    : <>
+                        <Link to={'/'}><Button variant="info">Volver al inicio</Button></Link>
+                        <Link to={'/cart'}><Button variant="success">Finalizar compra</Button></Link>  
+                    </>}
             </div>
         </section>
     )

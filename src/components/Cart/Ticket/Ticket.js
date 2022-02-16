@@ -1,12 +1,14 @@
 import React from 'react'
 import { Link } from "react-router-dom"
+import './Ticket.css'
 
 const Ticket = ({orderSummary}) => {
   return (
-    <>
-        <i>Tu numero de orden es: {orderSummary}</i>
-        <button><Link to={'/'}>Volver al inicio</Link></button>
-    </>
+    <section className='ticket'>
+        <h2>¡Gracias por tu compra!</h2>
+        <h5>Tu numero de orden es: {orderSummary}</h5>
+        <button className='btn btn-success'><Link to={'/'}>Volver al inicio</Link></button>
+    </section>
   )
 }
 
