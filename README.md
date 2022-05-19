@@ -1,10 +1,12 @@
-<h1 align="center">Hi 👋, I'm Franco Gallo</h1>
-<h3 align="center">A FrontEnd Web Developer from Argentina</h3>
+<h1 align="center">Hello my friend 👋</h1>
 
-- 👨‍💻 **This is my first project in React**
+- 👨‍💻 **This is my first JavaScript project in React Js**
 
-<h3 align="left">Connect with me: linkedin.com/in/francogallo-3324a2238</h3>
+- 📫 How to reach me **gallofrancogabriel@gmail.com**
+
+<h3 align="left">Connect with me:</h3>
 <p align="left">
+<a href="https://linkedin.com/in/francogallo-3324a2238" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="franco gallo" height="30" width="40" /></a>
 </p>
 
 <h3 align="left">Languages and Tools:</h3>
