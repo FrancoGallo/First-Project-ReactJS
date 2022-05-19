@@ -3,7 +3,7 @@
 
 - 👨‍💻 **This is my first project in React**
 
-<h3 align="left">Connect with me: <link>linkedin.com/in/francogallo-3324a2238</link></h3>
+<h3 align="left">Connect with me: <a>linkedin.com/in/francogallo-3324a2238</a></h3>
 <p align="left">
 </p>
 
